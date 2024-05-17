@@ -5,7 +5,16 @@
 */
 
 function isAnagram(str1, str2) {
-
+  if (str1.length !== str2.length) {
+      return false;
+  } else {
+      let firstString = str1.toUpperCase().split("").sort().join("");
+      let secondString = str2.toUpperCase().split("").sort().join("");
+      return firstString === secondString;
+  }
 }
 
+
 module.exports = isAnagram;
+
+

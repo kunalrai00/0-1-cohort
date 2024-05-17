@@ -13,8 +13,8 @@
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
 
-function calculateTotalSpentByCategory(transactions) {
-  return [];
-}
+
 
 module.exports = calculateTotalSpentByCategory;
+
+
