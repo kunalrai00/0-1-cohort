@@ -12,9 +12,47 @@
 	}
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
+function calculateTotalSpentByCategory(transactions) {
+  const categoryMap = {};
+  
+  transactions.forEach(transaction => {
+      const { category, price } = transaction;
+      if (categoryMap[category]) {
+          categoryMap[category] += price;
+      } else {
+          categoryMap[category] = price;
+      }
+  });
+  
+  const result = [];
+  for (const category in categoryMap) {
+      result.push({ category, totalSpent: categoryMap[category] });
+  }
+  
+  return result;
+}
+
+// Example usage:
+
 
 
 
 module.exports = calculateTotalSpentByCategory;
+const ans = calculateTotalSpentByCategory([
+  {
+		id: 1,
+		timestamp: 1656076800000,
+		price: 10,
+		category: 'Food',
+		itemName: 'Pizza',
+	},
+  {
+		id: 1,
+		timestamp: 1656076800000,
+		price: 10,
+		category: 'Food',
+		itemName: 'Pizza',
+	}
+])
 
-
+console.log(ans)
