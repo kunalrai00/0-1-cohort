@@ -13,6 +13,7 @@ function explainParseFloat(value) {
   console.log("Original Value:", value);
   let result = parseFloat(value);
   console.log("After parseFloat:", result);
+  console.log(typeof(result))
 }
 
 // Example Usage for parseFloat
