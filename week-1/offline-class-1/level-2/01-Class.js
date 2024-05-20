@@ -10,3 +10,6 @@ class Animal {
 }
 
 
+let dog = new Animal("dog", 4)
+
+console.log(dog)
