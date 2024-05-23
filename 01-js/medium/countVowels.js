@@ -20,4 +20,7 @@ function countVowels(str) {
   return totalVowels;
 }
 
+console.log(countVowels("abhisheakkkdklieaarpsjkfpr"));
+
+
 module.exports = countVowels;
