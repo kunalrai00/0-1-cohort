@@ -6,7 +6,18 @@
 */
 
 function countVowels(str) {
-    // Your code here
+  // Your code here
+  let totalVowels = 0;
+  const vowels = ["A", "E", "I", "O", "U"];
+  let modifiedStr = str.toUpperCase().split("");
+  for (let i = 0; i < modifiedStr.length; i++) {
+    if (vowels.includes(modifiedStr[i])) {
+      totalVowels += 1;
+    } else {
+      totalVowels = totalVowels;
+    }
+  }
+  return totalVowels;
 }
 
 module.exports = countVowels;
