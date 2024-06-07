@@ -28,8 +28,3 @@
 //   console.log(data);
 // })
 
-const fs = require("fs");
-
-fs.readFile("a.txt", "utf-8", function(err,data){
-  return data
-});
