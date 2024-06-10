@@ -5,22 +5,22 @@
   Once you've implemented the logic, test your code by running
 */
 
-function countVowels(str) {
-  // Your code here
+function countVowels(string){
+  const vowels = ['a','e', 'i', 'o', 'u']
+  let modifiedString = string.toLowerCase().replace(/\s/g, "");
   let totalVowels = 0;
-  const vowels = ["A", "E", "I", "O", "U"];
-  let modifiedStr = str.toUpperCase().split("");
-  for (let i = 0; i < modifiedStr.length; i++) {
-    if (vowels.includes(modifiedStr[i])) {
-      totalVowels += 1;
-    } else {
-      totalVowels = totalVowels;
-    }
+
+  for (let i=0;i<modifiedString.length;i++){
+      let char = modifiedString[i];
+      if (vowels.includes(char)){
+        totalVowels += 1;
+      }else{
+        totalVowels = totalVowels
+      }
   }
-  return totalVowels;
+  return totalVowels
 }
 
-console.log(countVowels("abhisheakkkdklieaarpsjkfpr"));
-
-
+let ans = countVowels("programming")
+console.log(ans)
 module.exports = countVowels;
