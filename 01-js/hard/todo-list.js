@@ -36,8 +36,10 @@ class Todo {
   }
 
   get(index) {
-      if (index >= 0 && index < this.todos.length) {
+      if (index >= 0 && index < this.todos.length + 1) {
           return this.todos[index];
+      }else{
+        return undefined
       }
   }
 
@@ -48,19 +50,6 @@ class Todo {
 
 // Example usage:
 const todoList = new Todo();
-todoList.add("Buy groceries");
-todoList.add("Do laundry");
-console.log("Initial todos:", todoList.getAll());
 
-todoList.update(0, "Buy vegetables");
-console.log("Updated todos:", todoList.getAll());
-
-todoList.remove(1);
-console.log("After removing todo at index 1:", todoList.getAll());
-
-console.log("Todo at index 0:", todoList.get(0));
-
-todoList.clear();
-console.log("After clearing todos:", todoList.getAll());
 
 module.exports = Todo;
