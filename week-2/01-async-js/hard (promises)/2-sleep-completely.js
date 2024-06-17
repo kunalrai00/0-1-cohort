@@ -5,6 +5,14 @@
  */
 
 function sleep(milliseconds) {
+    let p = new Promise(function(resolves){
+        setTimeout(resolves, milliseconds)
+    })
+    return p
 }
+
+sleep(1000).then(function(){
+    console.log("Hello posmise")
+})
 
 module.exports = sleep;

@@ -3,7 +3,16 @@
 */
 
 function wait(n) {
-    let p = new Promise
+    let p = new Promise (function(resolves){
+        setTimeout(resolves, n * 1000)
+    })
+    return p
 }
+
+
+wait(1).then(function(){
+    console.log("kualll")
+})
+
 
 module.exports = wait;
